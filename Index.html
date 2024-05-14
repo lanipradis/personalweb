@@ -1,0 +1,123 @@
+<!-- tells browser were dealing with html -->
+<!DOCTYPE html> 
+<!-- establishes lang we're using -->
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8" />
+  <!-- title that shows on chrome tab -->
+  <title>Leilani Pradis</title> 
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="icon" href="favicon.png">
+  <!-- link html and css file  -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button class="tablink" onclick="openPage('Home')">Home</button>
+    <button class="tablink" onclick="openPage('Research')" id="defaultOpen">Research</button>
+    <button class="tablink" onclick="openPage('Projects')">Projects</button>
+    <button class="tablink" onclick="openPage('More')">More</button>
+    
+  <div id="Home" class="tabcontent">
+      <div id="website-header">
+        <!-- can be from h1 to h6, # dictates size of header (h1 biggest) -->
+        <!-- for regualr text use 'p' for paragraph-->
+        <h1>Leilani Kai Pradis</h1>
+        <h3>Molecular, Cellular, and Developmental Biology Major @ UCLA</h3>
+        <!-- image tag. src = source. then file name  -->
+        <img src="Senior_Portrait.JPEG"/>
+      </div>
+      <p>Hi! I am an aspiring ... (add personal spill)</p>
+      <!-- link: <a href="link"> Visit "name to show" </a> (make sure www & its https)-->
+      <a href="https://www.linkedin.com/in/leilanipradis/"> Visit Linkedin</a>
+      <!-- can also redirect to other files -->
+      <a href="SEP_CV.pdf">CV</a>
+      <ul class="accordion">
+        <li>
+          <input type="radio" name="accordian" id="first" checked>
+          <label for="first">Education</label>
+          <div class="content">
+            <p>
+              <h3> Univeristy of California, Los Angeles </h3>
+              <h5> Sep 2023 - Present</h5>
+              <h3> Central Union High School </h3>
+              <h5> Aug 2019 - 2023 </h5>
+            </p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordian" id="second">
+          <label for="second">Awards</label>
+          <div class="content">
+            <p>
+              Text
+            </p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordian" id="third">
+          <label for="third">Skills</label>
+          <div class="content">
+            <p>
+              Text
+            </p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordian" id="fourth">
+          <label for="fourth">Courses</label>
+          <div class="content">
+            <p>
+              Text
+            </p>
+          </div>
+        </li>
+    </div>
+    
+    <div id="Research" class="tabcontent">
+      <h3>Research</h3>
+      <p>Coming soon...</p>
+    </div>
+    
+    <div id="Projects" class="tabcontent">
+      <h3>Projects<h3>
+      <p>Coming soon...</p>
+    </div>
+    
+    <div id="More" class="tabcontent">
+      <h3>More personal things!</h3>
+	    <div class="image-grid">
+		    <img class="image-grid-col-2 image-grid-row-2" src="mocha.JPG" alt="mocha">
+		    <img src="sunsets_small.jpeg" alt="sunsets">
+		    <img src="reading_Small.jpeg" alt="reading">
+		    <img src="nature_Small.jpeg" alt="nature">
+		    <img src="pilates_small.jpeg" alt="pilates">
+	    </div>
+      <!-- adding imbeds (spotify) -->
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5lEuDHvwGqvV5kYoqFrtJQ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  
+    </div>
+    
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }   
+        document.getElementById("defaultOpen").click();
+    </script>
+
+<!-- margin: space bt element and another elemnt; padding: space bt border and content -->
+</body>
+</html>
